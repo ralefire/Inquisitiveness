@@ -14,9 +14,9 @@ import java.util.Objects;
 
 public class Quicksort 
 {
-    void sortQuick(Double[] array, int num)
+    void sortQuick(double[] array, int num)
     {
-       Double tmp = 0.0;
+       double tmp = 0.0;
        //If the array is 1 or 2 elements long
        if (num <= 2)
        {
@@ -35,7 +35,7 @@ public class Quicksort
        {
           int iStart = 0;
           int iEnd   = num - 1;
-          Double pivot = array[num / 2];     //Identify the pivot
+          double pivot = array[num / 2];     //Identify the pivot
           while (iStart <= iEnd)
           {
              //If two elements are misplaced on opposite sides, swap
@@ -84,7 +84,7 @@ public class Quicksort
           {
              // copy the sub array into remaining
              int size = num - iStart;
-             Double[] remaining = new Double[size];
+             double[] remaining = new double[size];
              System.arraycopy(array, iStart, remaining, 0, size);
              
              sortQuick(array, iStart);
@@ -95,7 +95,7 @@ public class Quicksort
           else
           {
              int size = num - (iStart + 1);
-             Double[] remaining = new Double[size];
+             double[] remaining = new double[size];
              System.arraycopy(array, iStart + 1, remaining, 0, size);  
               
              sortQuick(array, iStart + 1);
